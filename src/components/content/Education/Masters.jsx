@@ -14,14 +14,14 @@ const Masters = () => {
         { name: "Algorithms", code: "CSE 531" },
         { name: "Machine Learning", code: "CSE 574" },
         { name: "Computer Security", code: "CSE 565" },
-        { name: "Operating Systems", code: "CSE 521" }
+        { name: "Operating Systems", code: "CSE 521" },
+        { name: "Project Management", code: "EAS 521" }
     ];
 
     const ongoingCourses = [
         { name: "Deep Learning", code: "CSE 676" },
         { name: "Modern Network Concepts", code: "CSE 589" },
-        { name: "MS Project Development", code: "CSE 611" },
-        { name: "Project Management", code: "EAS 521" }
+        { name: "MS Project Development", code: "CSE 611" }
     ];
 
     return (

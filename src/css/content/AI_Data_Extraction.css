@@ -1,0 +1,535 @@
+/* ── AI_Data_Extraction.css ── */
+
+/* --- 1. Container --- */
+.p1-container {
+    width: 100%;
+    height: 100%;
+    /* ← change min-height: 100% to height: 100% */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    /* ← change visible to auto */
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--editor-background);
+    color: var(--text-color);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* --- 2. Hero --- */
+.p1-hero {
+    position: relative;
+    padding: 2.5rem 2.5rem 2rem;
+    border-bottom: 1px solid var(--border-grey);
+}
+
+.p1-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 60% at 80% 50%, color-mix(in srgb, var(--accent-blue) 10%, transparent) 0%, transparent 70%),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, color-mix(in srgb, var(--text-color) 1.2%, transparent) 40px),
+        repeating-linear-gradient(0deg, transparent, transparent 39px, color-mix(in srgb, var(--text-color) 1.2%, transparent) 40px);
+    pointer-events: none;
+}
+
+.p1-hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.p1-badge {
+    font-family: 'Consolas', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 3px 10px;
+    border-radius: 3px;
+    border: 1px solid;
+}
+
+.p1-badge-course {
+    color: var(--storage-blue);
+    border-color: color-mix(in srgb, var(--storage-blue) 40%, transparent);
+    background: color-mix(in srgb, var(--storage-blue) 7%, transparent);
+}
+
+.p1-badge-client {
+    color: var(--terminal-success);
+    border-color: color-mix(in srgb, var(--terminal-success) 40%, transparent);
+    background: color-mix(in srgb, var(--terminal-success) 7%, transparent);
+}
+
+.p1-badge-year {
+    color: var(--ai-box-text);
+    border-color: var(--border-grey);
+    background: transparent;
+}
+
+.p1-hero-title {
+    font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.p1-hero-title span {
+    color: var(--accent-blue);
+}
+
+.p1-hero-subtitle {
+    font-family: 'Consolas', monospace;
+    font-size: 0.72rem;
+    color: var(--ai-box-text);
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.p1-hero-desc {
+    max-width: 640px;
+    color: var(--ai-box-text);
+    font-size: 0.875rem;
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+    text-align: left;
+}
+
+.p1-hero-desc strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.p1-hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.p1-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.p1-stat-value {
+    font-family: 'Consolas', monospace;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--storage-blue);
+    line-height: 1;
+}
+
+.p1-stat-label {
+    font-size: 0.6rem;
+    color: var(--ai-box-text);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* --- 3. Sections --- */
+.p1-section {
+    padding: 2rem 2.5rem;
+    border-bottom: 1px solid var(--border-grey);
+}
+
+.p1-section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.p1-section-tag {
+    font-family: 'Consolas', monospace;
+    font-size: 0.6rem;
+    color: var(--ai-box-text);
+    letter-spacing: 0.1em;
+}
+
+.p1-section-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.p1-section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border-grey);
+}
+
+/* --- 4. Context --- */
+.p1-context-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 1.2rem;
+}
+
+.p1-context-card {
+    background: var(--hover-light);
+    border: 1px solid var(--border-grey);
+    border-radius: 4px;
+    padding: 1rem 1.2rem;
+}
+
+.p1-context-label {
+    font-family: 'Consolas', monospace;
+    font-size: 0.6rem;
+    color: var(--ai-box-text);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.p1-context-value {
+    font-size: 0.82rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.p1-context-value a {
+    color: var(--storage-blue);
+    text-decoration: none;
+}
+
+.p1-context-value a:hover {
+    text-decoration: underline;
+}
+
+.p1-intro-body {
+    color: var(--ai-box-text);
+    line-height: 1.85;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.p1-intro-body strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* --- 5. Pipeline --- */
+.p1-pipeline-track {
+    display: flex;
+    align-items: flex-start;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-grey) transparent;
+}
+
+.p1-pipeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 110px;
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.p1-pipeline-step:hover .p1-step-circle {
+    transform: scale(1.08);
+}
+
+.p1-step-connector {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: var(--border-grey);
+    z-index: 0;
+    transition: background 0.4s ease;
+}
+
+.p1-pipeline-step:last-child .p1-step-connector {
+    display: none;
+}
+
+.p1-step-connector.active {
+    background: linear-gradient(90deg, var(--storage-blue) 0%, color-mix(in srgb, var(--storage-blue) 20%, transparent) 100%);
+}
+
+.p1-step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--hover-light);
+    border: 2px solid var(--border-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Consolas', monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ai-box-text);
+    position: relative;
+    z-index: 1;
+    transition: all 0.35s ease;
+}
+
+.p1-step-circle.active {
+    background: color-mix(in srgb, var(--accent-blue) 12%, var(--editor-background));
+    border-color: var(--storage-blue);
+    color: var(--storage-blue);
+    box-shadow: 0 0 16px color-mix(in srgb, var(--accent-blue) 25%, transparent);
+}
+
+.p1-step-circle.done {
+    background: color-mix(in srgb, var(--accent-blue) 7%, var(--editor-background));
+    border-color: color-mix(in srgb, var(--storage-blue) 40%, transparent);
+    color: var(--storage-blue);
+}
+
+.p1-step-label {
+    margin-top: 8px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--ai-box-text);
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 4px;
+    transition: color 0.3s ease;
+}
+
+.p1-step-label.active {
+    color: var(--storage-blue);
+}
+
+.p1-step-sub {
+    font-family: 'Consolas', monospace;
+    font-size: 0.55rem;
+    color: var(--ai-box-text);
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 3px;
+    padding: 0 4px;
+}
+
+.p1-pipeline-detail {
+    margin-top: 1.5rem;
+    background: var(--hover-light);
+    border: 1px solid var(--border-grey);
+    border-left: 3px solid var(--storage-blue);
+    border-radius: 4px;
+    padding: 1.2rem 1.4rem;
+    min-height: 100px;
+}
+
+.p1-detail-title {
+    font-family: 'Consolas', monospace;
+    font-size: 0.65rem;
+    color: var(--storage-blue);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+
+.p1-detail-body {
+    font-size: 0.82rem;
+    color: var(--ai-box-text);
+    line-height: 1.75;
+}
+
+.p1-detail-body code {
+    font-family: 'Consolas', monospace;
+    font-size: 0.75rem;
+    color: var(--terminal-success);
+    background: color-mix(in srgb, var(--terminal-success) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--terminal-success) 25%, transparent);
+    border-radius: 3px;
+    padding: 1px 6px;
+}
+
+.p1-detail-body strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* --- 6. Tech Stack --- */
+.p1-tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.p1-tech-chip {
+    font-family: 'Consolas', monospace;
+    font-size: 0.72rem;
+    padding: 5px 12px;
+    border-radius: 3px;
+    border: 1px solid var(--border-grey);
+    background: var(--hover-light);
+    color: var(--ai-box-text);
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.p1-tech-chip:hover {
+    border-color: var(--storage-blue);
+    color: var(--storage-blue);
+    background: color-mix(in srgb, var(--storage-blue) 7%, transparent);
+}
+
+.p1-tech-chip.primary {
+    color: var(--function-yellow);
+    border-color: color-mix(in srgb, var(--function-yellow) 35%, transparent);
+    background: color-mix(in srgb, var(--function-yellow) 6%, transparent);
+}
+
+.p1-tech-chip.ai {
+    color: var(--keyword-purple);
+    border-color: color-mix(in srgb, var(--keyword-purple) 35%, transparent);
+    background: color-mix(in srgb, var(--keyword-purple) 6%, transparent);
+}
+
+.p1-tech-chip.infra {
+    color: var(--string-text);
+    border-color: color-mix(in srgb, var(--string-text) 35%, transparent);
+    background: color-mix(in srgb, var(--string-text) 6%, transparent);
+}
+
+/* --- 7. Results --- */
+.p1-results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.p1-result-card {
+    background: var(--hover-light);
+    border: 1px solid var(--border-grey);
+    border-radius: 4px;
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color 0.2s;
+}
+
+.p1-result-card:hover {
+    border-color: var(--storage-blue);
+}
+
+.p1-result-value {
+    font-size: 1.8rem;
+    color: var(--storage-blue);
+}
+
+.p1-result-value.green {
+    color: var(--terminal-success);
+}
+
+.p1-result-desc {
+    font-size: 0.72rem;
+    color: var(--ai-box-text);
+    line-height: 1.4;
+}
+
+/* --- 8. Chart --- */
+.p1-chart-container {
+    background: var(--hover-light);
+    border: 1px solid var(--border-grey);
+    border-radius: 4px;
+    padding: 1.2rem 1.4rem;
+}
+
+.p1-chart-title {
+    font-family: 'Consolas', monospace;
+    font-size: 0.65rem;
+    color: var(--ai-box-text);
+    opacity: 0.5;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+.p1-chart-row {
+    display: grid;
+    grid-template-columns: 72px 1fr 56px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.p1-chart-label {
+    font-family: 'Consolas', monospace;
+    font-size: 0.68rem;
+    color: var(--ai-box-text);
+    text-align: right;
+}
+
+.p1-chart-bar-bg {
+    height: 18px;
+    background: color-mix(in srgb, var(--text-color) 5%, transparent);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.p1-chart-bar {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--storage-blue), var(--accent-blue));
+    width: 0;
+}
+
+.p1-chart-bar.final {
+    background: linear-gradient(90deg, var(--accent-blue), var(--terminal-success));
+}
+
+.p1-chart-pct {
+    font-family: 'Consolas', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ai-box-text);
+}
+
+.p1-chart-pct.final {
+    color: var(--terminal-success);
+}
+
+/* --- 9. Responsive --- */
+@media (max-width: 640px) {
+
+    .p1-hero,
+    .p1-section {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .p1-context-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .p1-results-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .p1-hero-stats {
+        gap: 1.5rem;
+    }
+}
+
+[data-theme='light'] .p1-context-card,
+[data-theme='light'] .p1-pipeline-detail,
+[data-theme='light'] .p1-result-card,
+[data-theme='light'] .p1-chart-container {
+    background: color-mix(in srgb, var(--text-color) 3%, transparent);
+}
+
+[data-theme='light'] .p1-tech-chip:hover {
+    background: color-mix(in srgb, var(--accent-blue) 7%, transparent);
+}

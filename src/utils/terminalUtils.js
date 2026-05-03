@@ -70,7 +70,10 @@ export const handleTerminalCommand = async (command, currentDirectory, setActive
             console.log("Response AI...");
             break;
         case 'open':
-            const fileName = args[0];
+            // const fileName = args[0];
+            const fileName = args.join(' ');
+
+            // const fileName = args;
             if (!fileName) {
                 return `open: operand expected`;
                 break;

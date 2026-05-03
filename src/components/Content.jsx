@@ -3,6 +3,7 @@ import Masters from "./content/Education/Masters";
 import Bachelors from "./content/Education/Bachelors";
 import AboutMe from "./content/Information/About";
 import Skills from "./content/Information/Skills";
+import AI_Data_Extraction from "./content/Projects/AI_Data_Extraction";
 import Hidden from "./content/Hidden";
 
 function Content({ showDirectory, showAI, showTerminal, activeFile }) {
@@ -12,6 +13,7 @@ function Content({ showDirectory, showAI, showTerminal, activeFile }) {
         'skill': <Skills />,
         'masters': <Masters />,
         'bachelors': <Bachelors />,
+        'AI_Data_Extraction': <AI_Data_Extraction />,
         'secret': <Hidden />
     };
 

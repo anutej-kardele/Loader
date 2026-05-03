@@ -46,7 +46,7 @@ export const fileSystem = [
                 size: "0KB",
                 created: "2025-02-17T17:41:00Z",
                 children: [
-                    { id: "portfolio", name: "Project1", type: "file", size: "1KB", created: "2025-02-17T17:51:00Z", icon: <VscCode color="#f1c40f" /> }
+                    { id: "AI_Data_Extraction", name: "AI Data Extraction", type: "file", size: "1KB", created: "2025-02-17T17:51:00Z", icon: <VscCode color="#f1c40f" /> }
                 ]
             },
             {
